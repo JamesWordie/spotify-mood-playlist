@@ -47,7 +47,6 @@ const SearchForm = (props) => {
             component={renderInput}
             label="Enter a search term..."
           />
-          <button className="btn btn-success">Search</button>
         </form>
       )}
     />

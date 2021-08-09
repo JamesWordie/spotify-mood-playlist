@@ -1,6 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { signIn, signOut, getUserData } from '../actions';
+import { signIn, signOut } from '../actions';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpotify } from '@fortawesome/free-brands-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 class SpotifyLogin extends React.Component {
   // after component mounts, check the url for the token and parses it to obtain the access token from spotify to be used later
@@ -19,12 +22,7 @@ class SpotifyLogin extends React.Component {
     const spotifyToken = response.access_token;
     if (spotifyToken) {
       this.props.signIn(spotifyToken);
-      this.getUserData(spotifyToken);
     }
-  }
-
-  getUserData = (spotifyToken) => {
-    this.props.getUserData(spotifyToken);
   }
 
   // function that connects to spotify oauth, accessing via window.load
@@ -54,6 +52,7 @@ class SpotifyLogin extends React.Component {
           onClick={this.onSignOutClick}
           className="btn btn-success"
         >
+          <FontAwesomeIcon icon={faSpotify} style={{ marginRight: "5px" }} />
           Sign Out
         </button>
       )
@@ -63,8 +62,22 @@ class SpotifyLogin extends React.Component {
           onClick={this.onSignInClick}
           className="btn btn-success"
         >
+          <FontAwesomeIcon icon={faSpotify} style={{ marginRight: "5px" }} />
           Sign In
         </button>
+      )
+    }
+  }
+
+  renderProfile() {
+    if (this.props.userData) {
+      return (
+        <div className="profile">
+          <div className="icon">
+            <FontAwesomeIcon icon={faUser} style={{ fontSize: '20px', lineHeight: '40px' }}/>
+          </div>
+          <span>{this.props.userData.username}</span>
+        </div>
       )
     }
   }
@@ -72,14 +85,21 @@ class SpotifyLogin extends React.Component {
   render() {
     return (
       <div>
-        {this.renderAuthButton()}
+        <span className="d-inline-flex">
+          {this.renderProfile()}
+          {this.renderAuthButton()}
+        </span>
       </div>
     )
   }
 }
 
 const mapStateToProps = state => {
-  return { isSignedIn: state.auth.isSignedIn }
+  return {
+    isSignedIn: state.auth.isSignedIn,
+    userData: state.auth.userData,
+    spotifyToken: state.auth.spotifyToken
+  }
 };
 
-export default connect(mapStateToProps, { signIn, signOut, getUserData })(SpotifyLogin);
+export default connect(mapStateToProps, { signIn, signOut })(SpotifyLogin);

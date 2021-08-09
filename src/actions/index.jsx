@@ -5,12 +5,15 @@ export const SIGN_IN = 'SIGN_IN';
 export const SIGN_OUT = 'SIGN_OUT';
 export const GET_DATA = 'GET_DATA';
 export const SEARCH = "SEARCH";
+export const SEARCH_TERM = "SEARCH_TERM";
 
-export const signIn = (spotifyToken) => {
-  return {
+export const signIn = (spotifyToken) => async dispatch => {
+  await dispatch(getUserData(spotifyToken));
+
+  dispatch({
     type: SIGN_IN,
     payload: spotifyToken
-  }
+  });
 }
 
 export const signOut = () => {
@@ -33,6 +36,13 @@ export const getUserData = (spotifyToken) => async dispatch => {
   };
 
   dispatch({ type: GET_DATA, payload: spotifyData })
+}
+
+export const searchTerm = formValues => {
+  return {
+    type: SEARCH_TERM,
+    payload: formValues
+  }
 }
 
 export const spotifySearchTerm = formValues => async (dispatch, getState) => {
