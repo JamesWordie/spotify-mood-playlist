@@ -1,10 +1,16 @@
-// import spotify from '../api/spotify';
+export const SIGN_IN = 'SIGN_IN';
+export const SIGN_OUT = 'SIGN_OUT';
 
-// const SIGN_IN = 'SIGN_IN';
+export const signIn = (spotifyToken) => {
+  return {
+    type: SIGN_IN,
+    payload: spotifyToken
+  }
+}
 
-// export const signIn = () => {
-//   return {
-//     type: SIGN_IN,
-//     payload:
-//   }
-// }
+export const signOut = () => {
+  return {
+    type: SIGN_OUT
+  };
+}
+
