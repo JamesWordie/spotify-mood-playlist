@@ -1,21 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-class SelectedSong extends React.Component {
-  // renderPlayer() {
-  //   return (
-  //     <iframe
-  //       title="player"
-  //       src={`https://open.spotify.com/embed/track/${this.props.selectedSong.id}`}
-  //       frameBorder="0"
-  //       width="300" height="380"
-  //       allowtransparency="true"
-  //       allow="encrypted-media"
-  //     >
-  //     </iframe>
-  //   )
-  // }
+import Speaker from '../components/Speaker';
 
+class SelectedSong extends React.Component {
   render() {
     const { selectedSong } = this.props.selectedSong;
 
@@ -23,7 +11,6 @@ class SelectedSong extends React.Component {
     return (
       <div className="col-md-3 align-self-start mt-4">
         <div className={`d-flex justify-content-center mt-2 ${iframeClass}`}>
-          {/* {this.renderPlayer()} */}
           <iframe
             title="player"
             src={`https://open.spotify.com/embed/track/${this.props.selectedSong.id}`}
@@ -34,6 +21,8 @@ class SelectedSong extends React.Component {
           >
           </iframe>
         </div>
+        {this.props.selectedSong &&
+        <Speaker selectedSong={this.props.selectedSong} />}
       </div>
     )
   }

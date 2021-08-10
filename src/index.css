@@ -133,6 +133,42 @@
   right: 20px;
 }
 
+/* Speaker */
+
+.speaker {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: black;
+  display: flex;
+  position: absolute;
+}
+
+.inner-speaker {
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+  background-color: lightslategrey;
+  margin: auto;
+  position: absolute;
+  left: 12%;
+  top: 12%;
+}
+
+.ripple {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  animation: rippleEffect linear infinite;
+}
+
+@keyframes rippleEffect {
+  0% { width: 0; height: 0; opacity: 0.5; }
+  100% { width: 200px; height: 200px; opacity: 0; }
+}
+
 /* Media Query */
 
 @media (max-width: 562px) {

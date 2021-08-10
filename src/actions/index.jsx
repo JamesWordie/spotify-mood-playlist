@@ -103,5 +103,4 @@ export const createPlaylist = () => async (dispatch, getState) => {
   } catch (error) {
     console.log(error);
   }
-
 }
