@@ -2,14 +2,19 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import SongCard from '../components/SongCard';
+import { selectedSong } from '../actions';
 
 class SongsGrid extends React.Component {
   renderSongs() {
     return this.props.songs.map((song) => {
       return (
-        <SongCard song={song} key={song.id} />
+        <SongCard song={song} key={song.id} onSubmit={this.onSubmit} />
       )
     })
+  }
+
+  onSubmit = (song) => {
+    this.props.selectedSong(song);
   }
 
   render() {
@@ -27,4 +32,4 @@ const mapStateToProps = state => {
   return { songs: state.search.songs }
 }
 
-export default connect(mapStateToProps, {})(SongsGrid);
+export default connect(mapStateToProps, { selectedSong })(SongsGrid);

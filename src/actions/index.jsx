@@ -6,6 +6,7 @@ export const SIGN_OUT = 'SIGN_OUT';
 export const GET_DATA = 'GET_DATA';
 export const SEARCH = "SEARCH";
 export const SEARCH_TERM = "SEARCH_TERM";
+export const SELECTED_SONG = "SELECTED_SONG";
 
 export const signIn = (spotifyToken) => async dispatch => {
   await dispatch(getUserData(spotifyToken));
@@ -55,7 +56,6 @@ export const spotifySearchTerm = formValues => async (dispatch, getState) => {
 
   const tracks = response.data.tracks.items;
   const trackInfo = tracks.map((track) => {
-    console.log(track)
     return {
       title: track.name,
       id: track.id,
@@ -69,4 +69,11 @@ export const spotifySearchTerm = formValues => async (dispatch, getState) => {
   });
 
   dispatch({ type: SEARCH, payload: trackInfo })
+}
+
+export const selectedSong = (song) => {
+  return {
+    type: SELECTED_SONG,
+    payload: song
+  }
 }

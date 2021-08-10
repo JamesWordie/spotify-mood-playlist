@@ -9,19 +9,23 @@ import SelectedSong from '../containers/SelectedSong';
 
 class App extends React.Component {
   render() {
+    console.log(this.props.selectedSong)
     return (
       <>
         <Navbar />
         <div className="container">
-          <Banner />
+          {!this.props.search.songs.length > 0 &&
+          <Banner />}
           {this.props.auth.isSignedIn &&
           <SearchBar />}
           {/* button to add playlist to spotify account */}
           <div className="row justify-content-center">
             {/* Selected Song Player && Tempo Animation ?? */}
-            {/* Grid of Cards with image, details or tracks, etc */}
-            <SelectedSong />
-            <SongsGrid />
+            {this.props.search.songs &&
+            <>
+              <SelectedSong />
+              <SongsGrid />
+            </>}
           </div>
         </div>
       </>
@@ -32,7 +36,8 @@ class App extends React.Component {
 const mapStateToProps = state => {
   return {
     auth: state.auth,
-    search: state.search
+    search: state.search,
+    selectedSong: state.selectedSong
   }
 }
 

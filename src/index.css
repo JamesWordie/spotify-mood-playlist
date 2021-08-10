@@ -104,6 +104,10 @@
   margin: 10px;
 }
 
+.song-card:hover {
+  cursor: pointer;
+}
+
 .song-image {
   width: 300px;
   height: 300px;
