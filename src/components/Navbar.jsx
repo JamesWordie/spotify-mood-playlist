@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeadphones } from '@fortawesome/free-solid-svg-icons';
 import SpotifyLogin from '../containers/SpotifyLogin';
 
-const Header = () => {
+const Navbar = () => {
   const renderInput = () => {
     return (
       <div className="container-fluid">
@@ -23,4 +23,4 @@ const Header = () => {
   )
 }
 
-export default Header;
+export default Navbar;

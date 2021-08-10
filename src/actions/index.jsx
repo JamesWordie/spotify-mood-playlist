@@ -55,12 +55,13 @@ export const spotifySearchTerm = formValues => async (dispatch, getState) => {
 
   const tracks = response.data.tracks.items;
   const trackInfo = tracks.map((track) => {
+    console.log(track)
     return {
       title: track.name,
       id: track.id,
       previewURL: track.preview_url,
       artist: track.album.artists[0].name,
-      image: track.album.images[0].url,
+      image: track.album.images[1].url,
       url: track.external_urls.spotify,
       albumTitle: track.album.name,
       uri: track.uri

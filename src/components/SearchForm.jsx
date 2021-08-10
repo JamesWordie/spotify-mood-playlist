@@ -14,7 +14,7 @@ const SearchForm = (props) => {
   const renderError = ({ error, touched }) => {
     if (touched && error) {
       return (
-        <div className="alert alert-danger" role="alert">
+        <div className="alert alert-danger mt-2" role="alert">
           <p className="text-muted my-0">{error}</p>
         </div>
       )
