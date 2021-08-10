@@ -98,6 +98,23 @@
   color: black;
 }
 
+.song-card {
+  width: 300px;
+  height: 400px;
+  margin: 10px;
+}
+
+.song-image {
+  width: 300px;
+  height: 300px;
+}
+
+.card-subtitle {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 /* Media Query */
 
 @media (max-width: 562px) {

@@ -12,7 +12,7 @@ class SelectedSong extends React.Component {
       //   allow="encrypted-media"
       // >
       // </iframe>
-      <div className="col-md-4">
+      <div className="col-md-4 align-self-start mt-4">
         <div className="card">
           <div className="card-title">HEY SELECTED SONG TO ADD</div>
         </div>
