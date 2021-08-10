@@ -65,6 +65,8 @@
 .profile:hover {
   width: fit-content;
   padding: 0 10px 0 0;
+  transition: cubic-bezier(0.215, 0.610, 0.355, 1);
+  cursor: pointer;
 }
 
 .profile:hover .icon {
@@ -87,6 +89,10 @@
 }
 
 /* Song Grid and Card */
+
+  .col-md-9 > .d-flex {
+    justify-content: flex-end;
+  }
 
 .play {
   position: absolute;
@@ -119,10 +125,26 @@
   overflow: hidden;
 }
 
+/* Buttons */
+
+.create-playlist {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+}
+
 /* Media Query */
 
 @media (max-width: 562px) {
   .banner {
     margin-top: 100px;
+  }
+
+  .profile {
+    display: none;
+  }
+
+  .col-md-9 > .d-flex {
+    justify-content: center;
   }
 }

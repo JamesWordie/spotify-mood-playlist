@@ -6,10 +6,10 @@ import Navbar from './Navbar';
 import Banner from './Banner';
 import SongsGrid from '../containers/SongsGrid';
 import SelectedSong from '../containers/SelectedSong';
+import CreatePlaylist from '../containers/CreatePlaylist';
 
 class App extends React.Component {
   render() {
-    console.log(this.props.selectedSong)
     return (
       <>
         <Navbar />
@@ -17,7 +17,10 @@ class App extends React.Component {
           {!this.props.search.songs.length > 0 &&
           <Banner />}
           {this.props.auth.isSignedIn &&
-          <SearchBar />}
+          <>
+            <SearchBar />
+            <CreatePlaylist />
+          </>}
           {/* button to add playlist to spotify account */}
           <div className="row justify-content-center">
             {/* Selected Song Player && Tempo Animation ?? */}

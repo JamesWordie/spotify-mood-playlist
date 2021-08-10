@@ -12,7 +12,7 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div className="row justify-content-center">
+      <div className="row justify-content-center mt-3">
         <div className="col-6">
           <SearchForm onSubmit={this.onSubmit} />
         </div>

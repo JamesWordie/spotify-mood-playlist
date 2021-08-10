@@ -6,7 +6,7 @@ import SpotifyLogin from '../containers/SpotifyLogin';
 const Navbar = () => {
   const renderInput = () => {
     return (
-      <div className="container-fluid">
+      <div className="container-fluid shadow-sm">
         <span className="d-inline-flex logo">
           <FontAwesomeIcon icon={faHeadphones} />
           <h3 className="first-title">Tune</h3><h3 className="second-title">Sense</h3>

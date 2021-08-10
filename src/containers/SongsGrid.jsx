@@ -19,8 +19,8 @@ class SongsGrid extends React.Component {
 
   render() {
     return (
-      <div className="col-md-8">
-        <div className="d-flex flex-wrap justify-content-end mt-4">
+      <div className="col-md-9">
+        <div className="d-flex flex-wrap mt-4">
           {this.renderSongs()}
         </div>
       </div>

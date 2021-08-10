@@ -19,10 +19,9 @@ class SelectedSong extends React.Component {
   render() {
     const { selectedSong } = this.props.selectedSong;
 
-    console.log(selectedSong === null)
     let iframeClass = selectedSong === null ? 'd-none' : "";
     return (
-      <div className="col-md-4 align-self-start mt-4">
+      <div className="col-md-3 align-self-start mt-4">
         <div className={`d-flex justify-content-center mt-2 ${iframeClass}`}>
           {/* {this.renderPlayer()} */}
           <iframe
