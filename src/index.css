@@ -133,7 +133,7 @@
   right: 20px;
 }
 
-/* Speaker */
+/* Speaker
 
 .speaker {
   width: 300px;
@@ -167,7 +167,7 @@
 @keyframes rippleEffect {
   0% { width: 0; height: 0; opacity: 0.5; }
   100% { width: 200px; height: 200px; opacity: 0; }
-}
+} */
 
 /* Media Query */
 

@@ -1,6 +1,7 @@
 import spotifyAuth from '../api/spotifyAuth';
 import spotifySearch from '../api/spotifySearch';
 import spotifyCreate from '../api/spotifyCreate';
+import spotifySongData from '../api/spotifySongData';
 
 export const SIGN_IN = 'SIGN_IN';
 export const SIGN_OUT = 'SIGN_OUT';
@@ -9,6 +10,7 @@ export const SEARCH = "SEARCH";
 export const SEARCH_TERM = "SEARCH_TERM";
 export const SELECTED_SONG = "SELECTED_SONG";
 export const CREATE_PLAYLIST = "CREATE_PLAYLIST";
+export const FETCH_ANALYSIS = "FETCH_ANALYSIS";
 
 export const signIn = (spotifyToken) => async dispatch => {
   await dispatch(getUserData(spotifyToken));
@@ -103,4 +105,27 @@ export const createPlaylist = () => async (dispatch, getState) => {
   } catch (error) {
     console.log(error);
   }
+}
+
+export const fetchAnalysis = (song_id) => async (dispatch, getState) => {
+  const { spotifyToken } = getState().auth;
+
+  const response = await spotifySongData.get(`/${song_id}`, {
+    headers: {
+      "Authorization": "Bearer " + spotifyToken
+    }
+  });
+
+  const data = {
+    acousticness: response.data.acousticness,
+    danceability: response.data.danceability,
+    energy: response.data.energy,
+    instrumentalness: response.data.instrumentalness,
+    liveness: response.data.liveness,
+    speechiness: response.data.speechiness,
+    tempo: response.data.tempo,
+    valence: response.data.valence
+  };
+
+  dispatch({ type: FETCH_ANALYSIS, payload: data });
 }

@@ -6,7 +6,7 @@ import Navbar from './Navbar';
 import Banner from './Banner';
 import SongsGrid from '../containers/SongsGrid';
 import SelectedSong from '../containers/SelectedSong';
-// import CreatePlaylist from '../containers/CreatePlaylist';
+import CreatePlaylist from '../containers/CreatePlaylist';
 
 class App extends React.Component {
   render() {
@@ -19,7 +19,7 @@ class App extends React.Component {
           {this.props.auth.isSignedIn &&
           <>
             <SearchBar />
-            {/* <CreatePlaylist /> */}
+            <CreatePlaylist />
           </>}
           {/* button to add playlist to spotify account */}
           <div className="row justify-content-center">

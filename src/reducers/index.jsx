@@ -7,6 +7,6 @@ import createPlaylistReducer from './createPlaylistReducer';
 export default combineReducers({
   auth: authReducer,
   search: searchReducer,
-  selectedSong: selectedSongReducer,
+  selectedSongInfo: selectedSongReducer,
   createPlaylist: createPlaylistReducer
 })
