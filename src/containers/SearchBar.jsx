@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import SearchForm from '../components/SearchForm';
+import SearchForm from '../components/searchForm';
 import { spotifySearchTerm, searchTerm } from '../actions';
 
 class SearchBar extends React.Component {
