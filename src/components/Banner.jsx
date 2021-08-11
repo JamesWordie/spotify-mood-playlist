@@ -10,7 +10,7 @@ const Banner = () => {
           <FontAwesomeIcon icon={faHeadphones} />
           <h1 className="first-title">Tune</h1><h1 className="second-title">Sense</h1>
         </span>
-        {/* <p className="text-light">Search for a song based on your mood to generate a playlist</p> */}
+        <p className="text-light">Search for a song based on your mood to generate a playlist</p>
       </div>
     </div>
   )
