@@ -184,6 +184,26 @@ canvas {
   box-shadow: 3px 3px 10px black;
   margin: 40px auto;
   width: 300px;
+  transition: cubic-bezier(0.645, 0.045, 0.355, 1) all 0.3s;
+  opacity: 0;
+}
+
+.more-info {
+  text-align: center;
+  transition: cubic-bezier(0.645, 0.045, 0.355, 1) all 0.3s;
+}
+
+.info-div {
+  width: 300px;
+  place-self: center;
+}
+
+.info-div:hover .table-data {
+  opacity: 1;
+}
+
+.info-div:hover .more-info {
+  opacity: 0;
 }
 
 .table td {

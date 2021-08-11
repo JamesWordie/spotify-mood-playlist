@@ -27,19 +27,22 @@ class SongData extends React.Component {
     }
 
     return (
-      <div className="table-data table-responsive-md">
-        <table className="table table-striped">
-          <tbody>
-            {this.renderData()}
-          </tbody>
-        </table>
+      <div className="info-div">
+        <p className="more-info text-muted m-0">Detailed Info</p>
+        <div className="table-data table-responsive-md">
+          <table className="table table-striped">
+            <tbody>
+              {this.renderData()}
+            </tbody>
+          </table>
+        </div>
       </div>
     )
   }
 
-  componentDidMount() {
-    {this.renderDataTable()}
-  }
+  // componentDidMount() {
+  //   {this.renderDataTable()}
+  // }
 
   renderGraph() {
     const { songData } = this.props
