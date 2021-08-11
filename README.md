@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# 🎧 TuneSense
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##### TuneSense is a ReactJS and Redux App that allows you to search for 20 songs based on a search term, such as your mood.
+##### You can view the project [here](https://jameswordie.github.io/spotify-mood-playlist/).
 
-## Available Scripts
+## User Journey
+1. User lands on homepage and log's in with their spotify account **authentication**.
+2. Once authenticated, a user is able to search for term, ie their current mood **Spotify Search API**.
+3. 20 results are returned from the API request, they are displayed with the album image, artist's name and song title.
+4. A user can then select a certain song, and this will allow the embedded iframe to appear and they can play the chosen song.
+5. A user can then request further information/analysis on the song, which renders a spider graph and table **Spotify Track Analysis API**.
+6. A user can continue to search as frequently as possible.
+## Future Features & Improvements
+* A key feature that is currently not enabled is the ability to create a playlist on your account with the returned songs **Spotify Create Playlist and Add Songs to Playlist API's**.
+* Add in a multiple checkbox including preset suggestions such as 'happy', 'sad', 'fun', 'relaxing' **React Final Form**.
+* Test coverage over the app, using sypress or another testing framework **Testing**.
+* A visualizer for the tempo possibly, so when the user plays a song, you can visualize the BPM.
+* Better error handling and smoother functionality around the app.
+* Commenting and notes to the app for future reference.
+* Cleaner CSS files as currently all in one file.
 
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thanks.
