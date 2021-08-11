@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeadphones } from '@fortawesome/free-solid-svg-icons';
+
 import SpotifyLogin from '../containers/spotifyLogin.jsx';
 
 const Navbar = () => {

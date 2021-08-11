@@ -102,9 +102,9 @@
 
 /* Song Grid and Card */
 
-  .col-md-9 > .d-flex {
-    justify-content: flex-end;
-  }
+.col-md-9 > .d-flex {
+  justify-content: flex-end;
+}
 
 .play {
   position: absolute;
@@ -145,6 +145,22 @@
 
 .search-bar {
   box-shadow: 3px 3px 10px black;
+}
+
+.info {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info p {
+  visibility: hidden;
+  transition: ease-in-out all 0.5s;
+  font-size: small;
+}
+
+.info:hover p {
+  visibility: visible;
 }
 
 /* Buttons */
