@@ -14,8 +14,8 @@ class SelectedSong extends React.Component {
     }
 
     return (
-      <div className="col-md-3 align-self-start mt-4">
-        <div className={`d-flex justify-content-center mt-2 ${iframeClass}`}>
+      <div className="col-lg-3 col-md-12 align-self-start mt-4">
+        <div className={`d-flex selected-song justify-content-center mt-2 ${iframeClass}`}>
           <iframe
             title="player"
             src={`https://open.spotify.com/embed/track/${selectedSong.id}`}

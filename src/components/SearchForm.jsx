@@ -4,7 +4,7 @@ import { Form, Field } from "react-final-form";
 const SearchForm = (props) => {
   const renderInput = ({ input, meta, label }) => {
     return (
-      <div>
+      <div className="search-bar">
         <input placeholder={label} className="form-control" {...input} />
         {renderError(meta)}
       </div>

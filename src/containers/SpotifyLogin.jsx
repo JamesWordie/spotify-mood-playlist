@@ -72,7 +72,7 @@ class SpotifyLogin extends React.Component {
   renderProfile() {
     if (this.props.userData) {
       return (
-        <div className="profile">
+        <div className="profile" onClick={() => window.open(this.props.userData.profileURL)}>
           <div className="icon">
             <FontAwesomeIcon icon={faUser} style={{ fontSize: '20px', lineHeight: '40px' }}/>
           </div>
