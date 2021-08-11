@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfo } from '@fortawesome/free-solid-svg-icons';
 
-import SearchForm from '../components/searchForm';
+import SearchForm from '../components/searchForm.jsx';
 import { spotifySearchTerm, searchTerm } from '../actions';
 
 class SearchBar extends React.Component {
