@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import SearchBar from '../containers/searchBar';
-import Navbar from './navbar';
-import Banner from './banner';
-import SongsGrid from '../containers/songsGrid';
-import SelectedSong from '../containers/selectedSong';
+import SearchBar from '../containers/searchBar.jsx';
+import Navbar from './navbar.jsx';
+import Banner from './banner.jsx';
+import SongsGrid from '../containers/songsGrid.jsx';
+import SelectedSong from '../containers/selectedSong.jsx';
 // import CreatePlaylist from '../containers/CreatePlaylist';
 
 class App extends React.Component {
