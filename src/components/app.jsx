@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import SearchBar from '../containers/SearchBar';
-import Navbar from './Navbar';
-import Banner from './Banner';
-import SongsGrid from '../containers/SongsGrid';
-import SelectedSong from '../containers/SelectedSong';
-import CreatePlaylist from '../containers/CreatePlaylist';
+import SearchBar from '../containers/searchBar';
+import Navbar from './navbar';
+import Banner from './banner';
+import SongsGrid from '../containers/songsGrid';
+import SelectedSong from '../containers/selectedSong';
+// import CreatePlaylist from '../containers/CreatePlaylist';
 
 class App extends React.Component {
   render() {
@@ -19,7 +19,7 @@ class App extends React.Component {
           {this.props.auth.isSignedIn &&
           <>
             <SearchBar />
-            <CreatePlaylist />
+            {/* <CreatePlaylist /> */}
           </>}
           {/* button to add playlist to spotify account */}
           <div className="row justify-content-center">
