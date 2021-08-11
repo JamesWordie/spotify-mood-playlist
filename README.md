@@ -12,6 +12,7 @@
 6. A user can continue to search as frequently as possible.
 ## Future Features & Improvements
 * A key feature that is currently not enabled is the ability to create a playlist on your account with the returned songs **Spotify Create Playlist and Add Songs to Playlist API's**.
+* Add in a multiple checkbox including preset suggestions such as 'happy', 'sad', 'fun', 'relaxing' **React Final Form**.
 * Test coverage over the app, using sypress or another testing framework **Testing**.
 * A visualizer for the tempo possibly, so when the user plays a song, you can visualize the BPM.
 * Better error handling and smoother functionality around the app.
