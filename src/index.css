@@ -5,9 +5,11 @@
 /* Container */
 
 .container {
-  min-height: 70vh;
+  min-height: 100vh;
   width: 100%;
   place-items: center;
+  padding-top: 80px;
+  padding-bottom: 100px;
 }
 
 .container > .row {
@@ -25,6 +27,15 @@
 }
 
 /* Navbar */
+
+.navbar {
+  box-shadow: 0 0 2px black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background: mediumturquoise;
+}
 
 .first-title {
   color: rgb(0, 0, 0);
@@ -53,6 +64,7 @@
   transition: all 0.2s ease-in-out;
   padding-top: 8px;
   margin-right: 10px;
+  box-shadow: 3px 3px 10px black;
 }
 
 .profile span {
@@ -125,12 +137,57 @@
   overflow: hidden;
 }
 
+.selected-song {
+  margin-bottom: 40px;
+}
+
+/* Search Bar */
+
+.search-bar {
+  box-shadow: 3px 3px 10px black;
+}
+
 /* Buttons */
 
 .create-playlist {
   position: absolute;
   top: 80px;
   right: 20px;
+  box-shadow: 3px 3px 10px black;
+}
+
+.song-analysis {
+  max-width: 300px;
+  margin: 40px auto;
+  box-shadow: 3px 3px 10px black;
+}
+
+.login {
+  box-shadow: 3px 3px 10px black;
+}
+
+/* Graph */
+
+.graph {
+  width: 300px;
+  height: 300px;
+  box-shadow: 3px 3px 10px black;
+  margin: 40px auto;
+  padding: 10px;
+}
+
+canvas {
+  background: mediumturquoise;
+}
+
+.table-data {
+  box-shadow: 3px 3px 10px black;
+  margin: 40px auto;
+  width: 300px;
+}
+
+.table td {
+  text-align: right;
 }
 
 /* Speaker
@@ -182,5 +239,16 @@
 
   .col-md-9 > .d-flex {
     justify-content: center;
+  }
+
+  .search-bar {
+    margin-top: 50px;
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .row > .col-lg-9 {
+    padding-left: 25px;
   }
 }
