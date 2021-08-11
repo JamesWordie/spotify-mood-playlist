@@ -16,20 +16,28 @@ class App extends React.Component {
         <div className="container">
           {!this.props.search.songs.length > 0 &&
           <Banner />}
+          {!this.props.auth.isSignedIn &&
+          <>
+            <span className="login-alert">
+              <h4 className="text-danger">Spotify Credentials for Login</h4>
+              <p className="m-0">REQUIRED To Allow You To View The App.</p>
+              <p className="m-0">Email - jamesw.testing@gmail.com</p>
+              <p className="m-0">Password - webdevtest</p>
+            </span>
+          </>}
           {this.props.auth.isSignedIn &&
           <>
             <SearchBar />
             {/* <CreatePlaylist /> */}
           </>}
-          {/* button to add playlist to spotify account */}
+          {this.props.auth.isSignedIn &&
           <div className="row justify-content-center">
-            {/* Selected Song Player && Tempo Animation ?? */}
             {this.props.search.songs &&
             <>
               <SelectedSong />
               <SongsGrid />
             </>}
-          </div>
+          </div>}
         </div>
       </>
     );
