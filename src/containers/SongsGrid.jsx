@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import SongCard from '../components/songCard.jsx';
+import SongCard from '../components/SongCard';
 import { selectedSong } from '../actions';
 
 class SongsGrid extends React.Component {
