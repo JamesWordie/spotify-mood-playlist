@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/spotify-mood-playlist/static/css/main.ff4c6b46.chunk.css",
+    "main.js": "/spotify-mood-playlist/static/js/main.fb47aef9.chunk.js",
+    "main.js.map": "/spotify-mood-playlist/static/js/main.fb47aef9.chunk.js.map",
+    "runtime-main.js": "/spotify-mood-playlist/static/js/runtime-main.d4822c64.js",
+    "runtime-main.js.map": "/spotify-mood-playlist/static/js/runtime-main.d4822c64.js.map",
+    "static/css/2.32c1ecfd.chunk.css": "/spotify-mood-playlist/static/css/2.32c1ecfd.chunk.css",
+    "static/js/2.194b7938.chunk.js": "/spotify-mood-playlist/static/js/2.194b7938.chunk.js",
+    "static/js/2.194b7938.chunk.js.map": "/spotify-mood-playlist/static/js/2.194b7938.chunk.js.map",
+    "index.html": "/spotify-mood-playlist/index.html",
+    "static/css/2.32c1ecfd.chunk.css.map": "/spotify-mood-playlist/static/css/2.32c1ecfd.chunk.css.map",
+    "static/css/main.ff4c6b46.chunk.css.map": "/spotify-mood-playlist/static/css/main.ff4c6b46.chunk.css.map",
+    "static/js/2.194b7938.chunk.js.LICENSE.txt": "/spotify-mood-playlist/static/js/2.194b7938.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d4822c64.js",
+    "static/css/2.32c1ecfd.chunk.css",
+    "static/js/2.194b7938.chunk.js",
+    "static/css/main.ff4c6b46.chunk.css",
+    "static/js/main.fb47aef9.chunk.js"
+  ]
+}
