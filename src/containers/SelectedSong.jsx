@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 // import Speaker from '../components/Speaker';
-import SongData from './songData';
+import SongData from '/songData';
 
 class SelectedSong extends React.Component {
   render() {

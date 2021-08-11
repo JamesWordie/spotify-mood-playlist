@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import SearchBar from '../containers/searchBar';
-import Navbar from './navbar';
-import Banner from './banner';
+import Navbar from '/navbar';
+import Banner from '/banner';
 import SongsGrid from '../containers/songsGrid';
 import SelectedSong from '../containers/selectedSong';
 // import CreatePlaylist from '../containers/CreatePlaylist';
