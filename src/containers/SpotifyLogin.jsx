@@ -5,20 +5,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpotify } from '@fortawesome/free-brands-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 
+const response = window.location.hash
+.substring(1)
+.split('&')
+.reduce((sum, current) => {
+  if (current) {
+    const block = current.split("=")
+    sum[block[0]] = decodeURIComponent(block[1])
+  }
+  return sum
+}, {});
+
 class SpotifyLogin extends React.Component {
   // after component mounts, check the url for the token and parses it to obtain the access token from spotify to be used later
   componentDidMount() {
-    const response = window.location.hash
-      .substring(1)
-      .split('&')
-      .reduce((sum, current) => {
-        if (current) {
-          const block = current.split("=")
-          sum[block[0]] = decodeURIComponent(block[1])
-        }
-        return sum
-      }, {});
-
     const spotifyToken = response.access_token;
     if (spotifyToken) {
       this.props.signIn(spotifyToken);
