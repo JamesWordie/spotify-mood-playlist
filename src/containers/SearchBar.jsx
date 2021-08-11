@@ -18,7 +18,7 @@ class SearchBar extends React.Component {
         <div className="col-12 col-sm-6">
           <SearchForm onSubmit={this.onSubmit} />
           <span className="info w-100 mt-2">
-            <FontAwesomeIcon icon={faInfo} />
+            <FontAwesomeIcon icon={faInfo} style={{ opacity: '0.5' }}/>
             <p className="text-light text-center m-0">Search for a song based on your mood to generate a playlist</p>
           </span>
         </div>
