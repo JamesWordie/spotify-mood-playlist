@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/spotify-mood-playlist/static/css/main.a0c05040.chunk.css",
-    "main.js": "/spotify-mood-playlist/static/js/main.c5bd6652.chunk.js",
-    "main.js.map": "/spotify-mood-playlist/static/js/main.c5bd6652.chunk.js.map",
+    "main.js": "/spotify-mood-playlist/static/js/main.9b5635da.chunk.js",
+    "main.js.map": "/spotify-mood-playlist/static/js/main.9b5635da.chunk.js.map",
     "runtime-main.js": "/spotify-mood-playlist/static/js/runtime-main.d4822c64.js",
     "runtime-main.js.map": "/spotify-mood-playlist/static/js/runtime-main.d4822c64.js.map",
     "static/css/2.32c1ecfd.chunk.css": "/spotify-mood-playlist/static/css/2.32c1ecfd.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.32c1ecfd.chunk.css",
     "static/js/2.20f6a07d.chunk.js",
     "static/css/main.a0c05040.chunk.css",
-    "static/js/main.c5bd6652.chunk.js"
+    "static/js/main.9b5635da.chunk.js"
   ]
 }
