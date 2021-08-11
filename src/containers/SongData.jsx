@@ -8,6 +8,39 @@ class SongData extends React.Component {
     this.props.fetchAnalysis(this.props.selectedSong.id);
   }
 
+  renderData() {
+    const data = this.props.songData;
+    return Object.keys(data).map((song, index) => {
+      return (
+        <tr key={index}>
+          <th scope='row'>{song}</th>
+          <td className="text-right">{(data[song]).toFixed(3)}</td>
+        </tr>
+      )
+    })
+  }
+
+  renderDataTable() {
+    const { songData } = this.props
+    if (!songData) {
+      return null;
+    }
+
+    return (
+      <div className="table-data table-responsive-md">
+        <table className="table table-striped">
+          <tbody>
+            {this.renderData()}
+          </tbody>
+        </table>
+      </div>
+    )
+  }
+
+  componentDidMount() {
+    {this.renderDataTable()}
+  }
+
   renderGraph() {
     const { songData } = this.props
     if (!songData) {
@@ -18,7 +51,7 @@ class SongData extends React.Component {
       labels: ['acousticness', 'danceability', 'energy', 'liveness', 'speechiness', 'valence'],
       datasets: [
         {
-          label: 'Song Analysis',
+          label: 'Analysis',
           data: [
             songData.acousticness,
             songData.danceability,
@@ -57,6 +90,7 @@ class SongData extends React.Component {
           Get Song Analysis
         </button>
         {this.renderGraph()}
+        {this.renderDataTable()}
       </>
     )
   }

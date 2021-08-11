@@ -14,7 +14,7 @@ class SelectedSong extends React.Component {
     }
 
     return (
-      <div className="col-lg-3 col-md-12 align-self-start mt-4">
+      <div className="col-xl-3 col-lg-6 col-md-12 align-self-start mt-4 d-flex flex-column">
         <div className={`d-flex selected-song justify-content-center mt-2 ${iframeClass}`}>
           <iframe
             title="player"
