@@ -15,6 +15,7 @@ class SearchBar extends React.Component {
       <div className="row justify-content-center mt-3">
         <div className="col-12 col-sm-6">
           <SearchForm onSubmit={this.onSubmit} />
+          <p className="text-light text-center mt-2">Search for a song based on your mood to generate a playlist</p>
         </div>
       </div>
     )
