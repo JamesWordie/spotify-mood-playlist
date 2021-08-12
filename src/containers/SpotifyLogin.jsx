@@ -31,8 +31,8 @@ class SpotifyLogin extends React.Component {
     const clientId = process.env.REACT_APP_CLIENT_ID;
     const origin = window.location.origin;
     const redirectURI = origin + '/'; //=== "http://localhost:3000" ? origin : origin;
-    const scopes = ["user-read-private", "playlist-modify-private", "user-read-email", "streaming", "user-read-currently-playing", "playlist-modify-public"].join("%20")
-    const params = "response_type=token&show_dialog=true";
+    const scopes = ["user-read-private", "playlist-modify-private", "streaming", "user-read-currently-playing", "playlist-modify-public"].join("%20")   //"user-read-email",
+    const params = "response_type=token&show_dialog=false&state=18061994";
     const request = `${baseURL}?client_id=${clientId}&redirect_uri=${redirectURI}&scopes=${scopes}&${params}`;
     window.open(request, "_self");
   }
