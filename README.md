@@ -1,7 +1,7 @@
 # 🎧 TuneSense
 
 ##### TuneSense is a ReactJS and Redux App that allows you to search for 20 songs based on a search term, such as your mood.
-##### You can view the project [here](https://jameswordie.github.io/spotify-mood-playlist/).
+##### You can view the project [here](https://tunesense.herokuapp.com/).
 
 ## User Journey
 1. User lands on homepage and log's in with their spotify account **authentication**.
