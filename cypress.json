@@ -1,3 +1,9 @@
 {
-  "chromeWebSecurity": false
+  "chromeWebSecurity": false,
+  "env": {
+    "auth_scope": "user-read-private%20playlist-modify-private%20streaming%20user-read-currently-playing%20playlist-modify-public",
+    "auth_params": "response_type=token&show_dialog=false&state=18061994",
+    "redirect_url": "http://localhost:3000/"
+  }
 }
+
